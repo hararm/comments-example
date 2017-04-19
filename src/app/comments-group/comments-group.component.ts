@@ -1,7 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {CommentSummaryVM} from "../comments/CommentSummaryVM";
-import {CommentsGroup} from "../comments/CommentsGroup";
-
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {CommentsGroup} from '../viewmodel/CommentsGroup';
 
 @Component({
   selector: 'app-comments-group',
@@ -10,13 +8,19 @@ import {CommentsGroup} from "../comments/CommentsGroup";
 })
 export class CommentsGroupComponent implements OnInit {
 
-
   @Input()
-  commentsGroup: CommentsGroup[];
-
+  commentsGroup: CommentsGroup;
+  private isOpen = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  onClick() {
+    if (!this.isOpen) {
+      this.isOpen = true;
+    } else {
+      this.isOpen = false;
+    }
+  }
 }

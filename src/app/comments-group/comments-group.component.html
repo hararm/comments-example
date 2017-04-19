@@ -1,5 +1,13 @@
-<ul class="comments-group">
-  <li class="comments-group-item" *ngFor="let comment of commentsGroup">
-    <app-comment-data [comment]="comment.comments" ]></app-comment-data>
-  </li>
+<ul class="comments-group" >
+  <button class="accordion" (click)="onClick()">{{commentsGroup.CommentGroupName}}</button>
+  <div *ngIf="isOpen">
+    <li class="comments-group-item comments-group-item-expanded" *ngFor="let comment of commentsGroup.comments"  >
+      <app-comment-data [comment]="comment" ></app-comment-data>
+    </li>
+  </div>
+  <div *ngIf="!isOpen">
+    <li class="comments-group-item comments-group-item-collapsed" *ngFor="let comment of commentsGroup.comments"  >
+      <app-comment-data [comment]="comment" ></app-comment-data>
+    </li>
+  </div>
 </ul>

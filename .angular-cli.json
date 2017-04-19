@@ -22,6 +22,9 @@
         "styles.css"
       ],
       "scripts": [],
+      "styles": [
+        "./assets/app.css"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

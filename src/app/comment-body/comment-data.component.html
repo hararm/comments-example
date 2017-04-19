@@ -1,0 +1,7 @@
+<div class="comment-body">
+  <div class="column comment-participants">{{participants}}</div>
+  <div class="column comment-time"><span [outerHTML]="comment.timestamp | date :'shortTime'"></span></div>
+  <div class="comment">{{comment.text}} </div>
+</div>
+
+

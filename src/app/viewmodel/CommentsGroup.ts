@@ -1,4 +1,4 @@
-import {CommentSummaryVM} from "./CommentSummaryVM";
+import {CommentSummaryVM} from './CommentSummaryVM';
 /**
  * Created by Armen on 2017-04-18.
  */

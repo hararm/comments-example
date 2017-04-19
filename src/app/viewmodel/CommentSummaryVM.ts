@@ -4,5 +4,7 @@
 export interface CommentSummaryVM {
   id: number;
   text: string;
+  timestamp: number;
+  participants: string[];
 }
 

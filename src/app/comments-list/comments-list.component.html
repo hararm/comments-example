@@ -1,5 +1,5 @@
 <ul class="comments-list">
-  <li class="comments-list-item" *ngFor="let group of commentsGroups" (click)="selectCommentsGroup(comment.id)"">
-    <app-comments-group [commentGroup]="group" ]></app-comments-group>
+  <li class="comments-list-item" *ngFor="let group of commentsGroups">
+    <app-comments-group [commentsGroup]="group"></app-comments-group>
   </li>
 </ul>

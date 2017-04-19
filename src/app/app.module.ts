@@ -6,21 +6,26 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CommentsListComponent } from './comments-list/comments-list.component';
 import { CommentsGroupComponent } from './comments-group/comments-group.component';
-import { CommentDataComponent } from './comment-data/comment-data.component';
+import { CommentDataComponent } from './comment-body/comment-data.component';
+import { CommentsService } from './services/comments-service.service';
+import { CommentsContainerComponent } from './comments-container-component/comments-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentsListComponent,
     CommentsGroupComponent,
-    CommentDataComponent
+    CommentDataComponent,
+    CommentsContainerComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    CommentsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

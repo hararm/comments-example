@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {CommentsGroup} from "../comments/CommentsGroup";
+import {CommentsGroup} from '../viewmodel/CommentsGroup';
+import {CommentsService} from '../services/comments-service.service';
 
 @Component({
   selector: 'app-comments-list',
@@ -12,13 +13,10 @@ export class CommentsListComponent implements OnInit {
 
   @Output()
   groupSelected = new EventEmitter();
-  constructor() { }
+  constructor(private commentsService: CommentsService) {
+    this.commentsGroups = commentsService.getComments();
+  }
 
   ngOnInit() {
   }
-
-  selectCommentsGroup(id: number){
-    this.groupSelected.emit();
-  }
-
 }
