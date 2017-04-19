@@ -1,3 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #444;
+  font-family: "Roboto",sans-serif;
+  font-size: 13px;
+  height: 100%;
+  line-height: 1.42857;
+  position: relative;
+}
+
 ul {
   list-style:none;
 }
@@ -112,12 +126,9 @@ button, input, select, textarea {
   padding: 2px;
   background: lightgray;
   margin: 10px 0;
-  color: #ffffff;
 }
 
 .comments-group-item {
-  font-family: "Roboto",sans-serif;
-  color: #444;
   font-weight: 300;
   vertical-align: top;
   background-color: white;
@@ -132,7 +143,7 @@ button, input, select, textarea {
 }
 
 .comments-group-item-collapsed {
-  max-height: 0px;
+  max-height: 0;
   padding: 0;
 }
 
@@ -142,28 +153,23 @@ button, input, select, textarea {
 }
 
 .comment {
-  font-family: "Roboto",sans-serif;
-  font-size: 13px;
-  color: #444;
+
   line-height: 1.42857;
   padding: 1px 3px 1px 3px;
 }
 
 .comment-time {
   color: #1976d2;
-  font-size: 12px;
   padding: 1px 3px 5px 3px;
 }
 
 .comment-participants {
   color: #1976d2;
-  font-size: 13px;
   padding: 1px 3px 5px 3px;
 }
 
 button.accordion {
   background-color: #eee;
-  color: #444;
   font-weight: 300;
   cursor: pointer;
   padding: 18px;
@@ -204,4 +210,67 @@ button.accordion.active, button.accordion:hover {
 
 .comment-header {
   padding: 3px;
+}
+.commentPanel { overflow-x: hidden; overflow-y: auto; /*transition: height 0.3s ease 0s;*/ }
+.comment-panel .comment-creation {
+  background-color: #fdfdfd;
+  border-color: #d0d0d0;
+  border-style: solid;
+  border-width: 0 1px;
+  padding: 5px;
+}
+
+/*Input text area*/
+.comment-panel textarea {
+  height: 35px;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+textarea.h360-input {
+  height: auto;
+  resize: vertical;
+}
+textarea {
+  overflow: auto;
+}
+
+textarea {
+  font-family: monospace;
+  border-color: rgb(169, 169, 169);
+}
+
+textarea {
+  -webkit-appearance: textarea;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  user-select: text;
+  flex-direction: column;
+  resize: vertical;
+  cursor: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-width: 1px;
+  border-style: solid;
+  border-color: initial;
+  border-image: initial;
+  padding: 2px;
+}
+
+input, textarea, select, button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0 0 0 0;
+  font: 13.3333px Arial;
+}
+
+input, textarea, select, button, meter, progress {
+  -webkit-writing-mode: horizontal-tb;
 }
